@@ -48,8 +48,8 @@ body{
   left: 0;
   /*background: #225470;*/
   z-index: 1;
-  opacity: 0.8;
-  animation : slide 5s infinite;
+  opacity: 0.5;
+  /*animation : slide 5s infinite;*/
 }
 
 @keyframes slide{
@@ -61,29 +61,46 @@ body{
 }
 
 .header-content{
+  font-weight: bold;
   margin-top: 30vh;
   z-index: 2;
+  opacity: 1;
   color: #fff;
 }
 
+
 .header-content h1{
   font-size: 50px;
-  animation: mymove 5s infinite;
+/*  animation: mymove 5s infinite;*/
 }
 
-@keyframes mymove {
+/*@keyframes mymove {
   0%   {background-color:red; left:0px; top:0px;}
   25%  {background-color:yellow; left:200px; top:0px;}
   50%  {background-color:blue; left:200px; top:200px;}
   75%  {background-color:green; left:0px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
-}
+}*/
 
 .header-content p{
   font-size: 1.5rem;
   display: block;
   padding: 2rem;
 }
+
+.header-options{
+  margin-top: 30vh;
+  align-items: right;
+  font-size: 40px;
+  color: #fff;
+}
+
+.header-options span{
+  padding: 1rem;
+  border-radius: 25px;
+  border: 2px solid white;
+}
+
 
 .btn{
   background: #34b3a0;

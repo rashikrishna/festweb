@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <title>TechABit</title>
+
   </head>
   <body>
     <header class="v-class container">
@@ -21,6 +22,11 @@
           <p>Lets take a tep towards aersdrd fytrytetr  turtetwr ytrtwertr uyyte</p>
           <a href="#" class="btn animated shake">Read More</a>
         </div>
+        <div class="header-options">
+          <span data-color="yellow" onmouseover="bgchange(this)" onmouseout="normal(this)">HACKATHON</span>
+          <span data-color="green" onmouseover="bgchange(this)" onmouseout="normal(this)">Gaming</span>
+          <span data-color="red" onmouseover="bgchange(this)" onmouseout="normal(this)">ENTERTAINMENT</span>
+        </div>
       </div>
     </header>
     <div class="content">
@@ -31,5 +37,24 @@
         Property Of Rashi Krishna CSE IIITBH
       </div>
     </footer>
+    <script>
+      function bgchange(x){
+        const data = x.dataset.color;
+        x.style.color = "#eb6734";
+        x.style.fontWeight = "bold";
+        document.querySelector('video').currentTime = 0;
+        document.querySelector('.header-overlay').style.background = data;
+
+      }
+
+      function normal(x){
+        x.style.color = "#fff";
+        x.style.fontWeight = "normal";
+        document.querySelector('video').playbackRate = 1;
+        document.querySelector('.header-overlay').style.background = "transparent";
+      }
+
+    </script>
+
   </body>
 </html>

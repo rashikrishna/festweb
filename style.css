@@ -48,7 +48,6 @@ body{
   left: 0;
   /*background: #225470;*/
   z-index: 1;
-  opacity: 0.5;
   /*animation : slide 5s infinite;*/
 }
 
@@ -62,7 +61,8 @@ body{
 
 .header-content{
   font-weight: bold;
-  margin-top: 30vh;
+  margin-top:20vh;
+  left: 50%;
   z-index: 2;
   opacity: 1;
   color: #fff;
@@ -70,6 +70,7 @@ body{
 
 
 .header-content h1{
+  letter-spacing: 6px;
   font-size: 50px;
 /*  animation: mymove 5s infinite;*/
 }
@@ -89,16 +90,19 @@ body{
 }
 
 .header-options{
-  margin-top: 30vh;
+  padding: 5rem;
+  font-family: 'Amatic SC', cursive;
   align-items: right;
   font-size: 40px;
   color: #fff;
 }
 
 .header-options span{
-  padding: 1rem;
+  padding: 1.5rem;
+  margin: 1rem;
   border-radius: 25px;
   border: 2px solid white;
+  text-shadow: 0 0 20px #050103;
 }
 
 

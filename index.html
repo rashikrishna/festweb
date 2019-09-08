@@ -2,31 +2,47 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <meta charset="utf-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
     <title>TechABit</title>
-
+    <style>
+      #title{
+        animation-delay: 1.75s;
+        animation-duration: 1s;
+      }
+      #header-options{
+        animation-delay: 2s;
+      }
+      #read_more{
+        animation-delay: 2s;
+      }
+      #para{
+        animation-delay: 2s;
+      }
+    </style>
   </head>
   <body>
     <header class="v-class container">
       <div class="fullscreen-video-wrap">
-        <video autoplay="true" loop="true">
-          <source src="EMIT__Connections_Plexus.mov" type="video/mp4">
+        <video src="EMIT__Connections_Plexus.mov" type="video/mp4" autoplay="true" loop="true">
+
             Your browser does not support the video tag.
         </video>
       </div>
       <div class="header-overlay">
         <div class="header-content">
-          <h1>Welcome Everyone</h1>
-          <p>Lets take a tep towards aersdrd fytrytetr  turtetwr ytrtwertr uyyte</p>
-          <a href="#" class="btn animated shake">Read More</a>
+          <h1 class="animated fadeInDown" id="title">Welcome Everyone</h1>
+          <p class="animated fadeIn" id="para">Lets take a tep towards aersdrd fytrytetr  turtetwr ytrtwertr uyyte</p>
+          <a href="#" class="animated fadeIn 10s btn" id="read_more">Read More</a>
+          <div class="header-options animated fadeIn 10s" id="header-options">
+            <span data-color="#ffbd33" onmouseover="bgchange(this)" onmouseout="normal(this)">HACKATHON</span>
+            <span data-color="#9af49f" onmouseover="bgchange(this)" onmouseout="normal(this)">Gaming</span>
+            <span data-color="#f49f9a" onmouseover="bgchange(this)" onmouseout="normal(this)">ENTERTAINMENT</span>
+          </div>
         </div>
-        <div class="header-options">
-          <span data-color="yellow" onmouseover="bgchange(this)" onmouseout="normal(this)">HACKATHON</span>
-          <span data-color="green" onmouseover="bgchange(this)" onmouseout="normal(this)">Gaming</span>
-          <span data-color="red" onmouseover="bgchange(this)" onmouseout="normal(this)">ENTERTAINMENT</span>
-        </div>
+
       </div>
     </header>
     <div class="content">
@@ -40,18 +56,29 @@
     <script>
       function bgchange(x){
         const data = x.dataset.color;
-        x.style.color = "#eb6734";
+        x.style.color = "#000";
         x.style.fontWeight = "bold";
-        document.querySelector('video').currentTime = 0;
+        var vid = document.querySelector('video');
+        vid.currentTime = 0;
+        //vid.src = "180503_01_PurpleGrid.mp4";
+        //vid.autoplay = true;
+        //vid.loop = true;
+        //vid.type = "video/mp4";
+        //vid.load();
+        x.style.textShadow = "0 0 90px #00ff";
         document.querySelector('.header-overlay').style.background = data;
+        document.querySelector('.header-overlay').style.opacity = 0.5;
+
 
       }
 
       function normal(x){
         x.style.color = "#fff";
+        //  x.style.textShadow = "none";
         x.style.fontWeight = "normal";
         document.querySelector('video').playbackRate = 1;
         document.querySelector('.header-overlay').style.background = "transparent";
+          document.querySelector('.header-overlay').style.opacity = 1;
       }
 
     </script>

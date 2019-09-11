@@ -68,10 +68,15 @@ body{
   color: #fff;
 }
 
+nav{
+  z-index: 2;
+}
 
 .header-content h1{
   letter-spacing: 6px;
   font-size: 50px;
+  /*font-family: 'Pacifico', cursive;*/
+  font-family: 'Permanent Marker', cursive;
 /*  animation: mymove 5s infinite;*/
 }
 
@@ -91,6 +96,7 @@ body{
 
 .header-options{
   padding: 5rem;
+  letter-spacing: 1px;
   font-family: 'Amatic SC', cursive;
   align-items: right;
   font-size: 40px;
@@ -106,13 +112,13 @@ body{
 }
 
 
-.btn{
+.bton{
   background: #34b3a0;
   color: #fff;
   padding:1rem;
 }
 
-.btn:hover{
+.bton:hover{
   background: #fff;
   color: #34b3a0;
 }
